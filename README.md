@@ -62,7 +62,7 @@ them in sequence
 
 Note: You may have ancillary objects and method in order to make you're code easer to understand and implement.
 
-# Running on WSL with X410 (X for Windows 10)
+# Running on WSL with X410 (X Server for Windows 10)
 
 X410 is an X server for Windows. However, it is paid. For a free X server for Windows, Xming is a good alternative.
 
