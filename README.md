@@ -62,11 +62,35 @@ them in sequence
 
 Note: You may have ancillary objects and method in order to make you're code easer to understand and implement.
 
-# Running on WSL with X410 (X Server for Windows 10)
+# Running on WSL with an X Server for Windows 10
+This program was developed and ran on a Windows machine using Windows Subystem for Linux Ubuntu (WSL). 
+In order to successfully run this program using WSL, python3-opencv must be installed on WSL, and an X server must be installed on Windows. 
 
-X410 is an X server for Windows. However, it is paid. For a free X server for Windows, Xming is a good alternative.
+## Installing python3-opencv
+1. To install opencv for WSL run command:
+```
+sudo apt install python3-opencv
+```
+2. Ensure install was correct by running Python3 using command:
+```
+python3
+```
+3. In Python3 run command:
+```
+import cv2 as cv
+print(cv.__version__)
+```
+If no erros are displayed, opencv was successfully installed.
+## Installing X Server for Windows 10
+In order for WSL to display on Windows, an X server must be installed (Windows nor WSL come with an X server).
 
-1. Launch X410 (or preferred X server for Windows)
+This program was developed using X410 (X Server 4 Windows 10), however, it is paid. A good free alternative is Xming. 
+
+## Connecting WSL to the X Server
+WSL will not know what display set, so we set it in the terminal.
+
+Note: This will have to be done everytime the WSL terminal instance is closed.
+1. Launch X410 (or preferred X server for Windows).
 2. On the WSL terminal currently being used, export display:
     * export DISPLAY=localhost:0.0 or 
     * export DISPLAY=127.0.0:0.0 or
