@@ -64,11 +64,12 @@ Note: You may have ancillary objects and method in order to make you're code eas
 
 # Running on WSL with X410 (X for Windows 10)
 
-X410 is a X server for Windows. However, it is paid. For a free X server for Windows, Xming is a good alternative.
+X410 is an X server for Windows. However, it is paid. For a free X server for Windows, Xming is a good alternative.
 
-1. Launch X410
-2. On WSL terminal, export display
-  * export DISPLAY=localhost:0.0 or export DISPLAY=127.0.0:0.0
+1. Launch X410 (or preferred X server for Windows)
+2. On the WSL terminal currently being used, export display:
+    * export DISPLAY=localhost:0.0 or 
+    * export DISPLAY=127.0.0:0.0 or
 
 WSL should now to able to display on the Windows X server.
 
