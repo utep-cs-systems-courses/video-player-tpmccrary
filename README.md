@@ -87,7 +87,7 @@ In order for WSL to display on Windows, an X server must be installed (Windows n
 This program was developed using X410 (X Server 4 Windows 10), however, it is paid. A good free alternative is Xming. 
 
 ## Connecting WSL to the X Server
-WSL will not know what display set, so we set it in the terminal.
+WSL will not have a display set, so we set it in the terminal.
 
 Note: This will have to be done everytime the WSL terminal instance is closed.
 1. Launch X410 (or preferred X server for Windows).
