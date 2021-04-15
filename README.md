@@ -62,9 +62,11 @@ them in sequence
 
 Note: You may have ancillary objects and method in order to make you're code easer to understand and implement.
 
-# Running on WSL with an X Server for Windows 10
+# Running on WSL and WSL2 with an X Server for Windows 10
 This program was developed and ran on a Windows machine using Windows Subystem for Linux Ubuntu (WSL). 
 In order to successfully run this program using WSL, python3-opencv must be installed on WSL, and an X server must be installed on Windows. 
+
+Note, WSL and WSL2 take different commands since WSL2 is technically being ran in a virtual machine, unlike WSL. 
 
 ## Installing python3-opencv
 1. To install opencv for WSL run command:
@@ -94,6 +96,17 @@ Note: This will have to be done everytime the WSL terminal instance is closed.
 2. On the WSL terminal currently being used, export display:
     * export DISPLAY=localhost:0.0 or 
     * export DISPLAY=127.0.0:0.0 or
+
+WSL should now to able to display on the Windows X server.
+
+## Connecting WSL2 to the X Server
+WSL2 will not have a display set, so we set it in the terminal.
+
+Note: This will have to be done everytime the WSL2 terminal instance is closed.
+1. Launch X410 (or preferred X server for Windows).
+2. For X410, enable the settings "Allow Public Access". This will allow connections to X410 besides the localhost (since WSL2 is being run through a virtual machine it has its own unique IP).
+3. On the WSL2 terminal currently being used, export display:
+    * export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
 WSL should now to able to display on the Windows X server.
 
