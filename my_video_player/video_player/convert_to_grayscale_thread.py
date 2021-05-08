@@ -31,7 +31,7 @@ class ConvertToGrayscale(Thread):
         '''
 
         # Keep trying to convert to grayscale until we have reached the max number of frames.
-        while (self.frameCounter < 72):
+        while (self.frameCounter < self.maxFrameCount):
             
             # If the frame queue is not empty, make the next frame grayscale.
             if (self.colorFrameQueue.queueIsEmpty() is False):
